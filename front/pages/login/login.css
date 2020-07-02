@@ -1,0 +1,9 @@
+.error-message {
+    color: red;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

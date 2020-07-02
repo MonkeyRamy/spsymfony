@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Accueil</title>
+        <link rel="manifest" href="manifest.json">
+        <link rel="stylesheet" href="normalize.css" />
+        <link rel="icon" href="assets/favicon.png" />
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <img src="assets/loader.gif">
+    </body>
+    <script>
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register("service-worker.js")
+            .then(() => {
+                console.log("service worker registered");
+            }).catch(function(error) {
+                console.log('ServiceWorker registration failed:', error);
+            });
+        }
+    </script>
+</html>

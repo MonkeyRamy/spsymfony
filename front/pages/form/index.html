@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Login</title>
+        <link rel="manifest" href="../../manifest.json">
+        <link rel="stylesheet" href="../../normalize.css" />
+        <link rel="stylesheet" href="../../main.css" />
+        <link rel="stylesheet" href="form.css" />
+        <link rel="icon" href="../../assets/favicon.png" />
+        <script src="form.js"></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <h1>form</h1>
+        </header>
+        <div class="main-container">
+            <form class="tile-container form-container">
+                <section id="method">
+                </section>
+                <section id="category">
+                </section>
+                <section>
+                    <label for="amount">Montant</label>
+                    <input type="number" placeholder="0,00" step="0.01" name="amount" id="amount" required>
+                </section>
+                <section>
+                    <label for="datePayment">Date</label>
+                    <input type="date" name="datePayment" id="datePayment" required>
+                </section>
+                <section>
+                    <input type="button" value="Ajouter" id="addButton">
+                </section>
+                <section id="error-message" class="error-message"></section>
+            </form>
+        </div>
+        <footer class="main-footer">MAIN FOOTER</footer>
+    </body>
+    <script>
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register("../../service-worker.js")
+            .then(() => {
+                console.log("service worker registered");
+            }).catch(function(error) {
+                console.log('ServiceWorker registration failed:', error);
+            });
+        }
+    </script>
+</html>

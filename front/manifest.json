@@ -1,0 +1,12 @@
+{
+    "name": "gestion budget",
+    "short_name": "gestion budget",
+    "icons": [{
+        "src": "assets/favicon.png",
+        "sizes": "256x256",
+        "type": "image/png"
+  }],
+    "start_url": "index.html",
+    "display": "standalone",
+    "orientation": "portrait"
+  }

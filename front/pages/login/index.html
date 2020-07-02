@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Login</title>
+        <link rel="manifest" href="../../manifest.json">
+        <link rel="stylesheet" href="../../normalize.css" />
+        <link rel="stylesheet" href="../../main.css" />
+        <link rel="stylesheet" href="login.css" />
+        <link rel="icon" href="../../assets/favicon.png" />
+        <script src="login.js"></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <h1>login</h1>
+        </header>
+        <div class="main-container">
+            <form class="tile-container form-container">
+                <section>
+                    <label for="login">Identifiant</label>
+                    <input type="text" name="login" id="login" required>
+                </section>
+                <section>
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" id="password" required>
+                </section>
+                <section>
+                    <input type="button" value="Se connecter" id="loginButton">
+                </section>
+                <section id="error-message" class="error-message"></section>
+            </form>
+        </div>
+        <footer class="main-footer">MAIN FOOTER</footer>
+    </body>
+    <script>
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register("../../service-worker.js")
+            .then(() => {
+                console.log("service worker registered");
+            }).catch(function(error) {
+                console.log('ServiceWorker registration failed:', error);
+            });
+        }
+    </script>
+</html>
