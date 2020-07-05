@@ -31,9 +31,9 @@ window.addEventListener("DOMContentLoaded", () => {
     
                         montant.innerHTML = element.amount;
                         date.innerHTML = element.date;
-                        method.innerHTML = element.method;
-                        category.innerHTML = element.category;
-                        type.innerHTML = element.type;
+                        method.innerHTML = element.paymentMethodIdpayingMethod.label;
+                        category.innerHTML = element.paymentCategoryIdpaymentCategory.label;
+                        type.innerHTML = element.paymentCategoryIdpaymentCategory.categoryTypeIdcategoryType.label;
     
                         line.appendChild(montant);
                         line.appendChild(date);
@@ -96,8 +96,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 }
             }
         };
-        xhr.open("GET", "/spphp61/back/index.php?action=getPaymentList&id=" + JSON.parse(sessionStorage.getItem("user")).iduser, true);
-        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhr.open("GET", "https://l3m.alwaysdata.net/payment/list?id=" + JSON.parse(sessionStorage.getItem("user")).iduser, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(null);
     }

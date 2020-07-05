@@ -32,10 +32,10 @@ class PaymentCategoryController extends AbstractController
     /**
      * @Route("/", name="payment_category_index", methods={"GET"})
      */
-    public function index(PaymentCategoryRepository $paymentCategoryRepository): Response
+    public function index(): Response
     {
         return $this->render('payment_category/index.html.twig', [
-            'payment_categories' => $paymentCategoryRepository->findAll(),
+            'payment_categories' => $this->repository->findAll(),
         ]);
     }
 

@@ -24,7 +24,7 @@ class PaymentMethodController extends AbstractController
     /**
      * @Route("/methods", name="methods", methods={"GET"})
      */
-    public function getAllMethods()
+    public function methods()
     {
         return $this->json($this->repository->findAll());
     }

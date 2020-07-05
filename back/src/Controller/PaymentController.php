@@ -24,7 +24,7 @@ class PaymentController extends AbstractController
     /**
      * @Route("/list", name="list", methods={"GET"})
      */
-    public function getPaymentList(Request $request)
+    public function list(Request $request)
     {
         $userId = $request->query->get('id');
         return $this->json($this->repository->findByExampleField($userId));

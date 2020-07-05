@@ -24,11 +24,10 @@ class PaymentRepository extends ServiceEntityRepository
     //  */
     public function findByExampleField($value)
     {
-        error_log("poueeeeeeeeeeeeeeeeeeet");
         return $this->createQueryBuilder('payment')
-            ->andWhere('payment.user_iduser = :val')
+            ->andWhere('payment.userIduser = :val')
             ->setParameter('val', $value)
-            ->orderBy('payment.id', 'ASC')
+            ->orderBy('payment.idpayment', 'ASC')
             ->getQuery()
             ->getResult()
         ;

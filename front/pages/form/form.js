@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         document.getElementById("method").innerHTML = options;
                 }
                 };
-                xhr.open("GET", "/spphp61/back/index.php?action=getMethods", true);
+                xhr.open("GET", "https://l3m.alwaysdata.net/payment/method/methods", true);
                 xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
                 xhr.setRequestHeader('Content-Type', 'application/json');
                 xhr.send(null);
@@ -47,7 +47,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         document.getElementById("category").innerHTML = options;
                 }
                 };
-                xhr.open("GET", "/spphp61/back/index.php?action=getCategories", true);
+                xhr.open("GET", "https://l3m.alwaysdata.net/payment/category/categories", true);
                 xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
                 xhr.setRequestHeader('Content-Type', 'application/json');
                 xhr.send(null);
