@@ -15,13 +15,28 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class PaymentController extends AbstractController
 {
+    private $repository;
+
+    public function __construct(PaymentRepository $repository) {
+        $this->repository = $repository;
+    }
+
+    /**
+     * @Route("/list", name="list", methods={"GET"})
+     */
+    public function getPaymentList(Request $request)
+    {
+        $userId = $request->query->get('id');
+        return $this->json($this->repository->findByExampleField($userId));
+    }
+
     /**
      * @Route("/", name="payment_index", methods={"GET"})
      */
-    public function index(PaymentRepository $paymentRepository): Response
+    public function index(): Response
     {
         return $this->render('payment/index.html.twig', [
-            'payments' => $paymentRepository->findAll(),
+            'payments' => $this->repository->findAll(),
         ]);
     }
 

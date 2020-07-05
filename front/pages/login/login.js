@@ -20,8 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 }
             }
         };
-        xhr.open("GET", "http://localhost:8000/login?login=" + userLogin + "&password=" + MD5(userPassword), true);
-        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhr.open("GET", "https://l3m.alwaysdata.net/user/login?login=" + userLogin + "&password=" + MD5(userPassword), true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(null);
     }

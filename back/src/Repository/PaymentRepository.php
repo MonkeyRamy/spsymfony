@@ -22,19 +22,17 @@ class PaymentRepository extends ServiceEntityRepository
     // /**
     //  * @return Payment[] Returns an array of Payment objects
     //  */
-    /*
     public function findByExampleField($value)
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
+        error_log("poueeeeeeeeeeeeeeeeeeet");
+        return $this->createQueryBuilder('payment')
+            ->andWhere('payment.user_iduser = :val')
             ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
+            ->orderBy('payment.id', 'ASC')
             ->getQuery()
             ->getResult()
         ;
     }
-    */
 
     /*
     public function findOneBySomeField($value): ?Payment
